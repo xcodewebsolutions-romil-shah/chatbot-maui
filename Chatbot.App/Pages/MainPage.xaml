@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Chatbot.App.Pages.MainPage"
+             xmlns:helpers="clr-namespace:Chatbot.App.Helpers"
+             Shell.NavBarIsVisible="False">
+    <ScrollView HorizontalOptions="Center"
+                VerticalOptions="Center">
+        <VerticalStackLayout Margin="20"
+                             Spacing="15"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center">
+            <Frame BackgroundColor="#504c4c"
+                   CornerRadius="10"
+                   BorderColor="Transparent">
+                <Label HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="20">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static helpers:FontAwesomeSolidIcons.Sparkles}"
+                                  TextColor="#e8b804"
+                                  FontFamily="FontAwesomeSolidIcons"
+                                  FontSize="30" />
+                            <Span Text="&#10;" />
+                            <Span Text="Chatbot"
+                                  TextColor="White"
+                                  FontFamily="AvenirBold" />
+                            <Span Text=" helps you complete tedious tasks, fast."
+                                  TextColor="White" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame BorderColor="Transparent"
+                   HorizontalOptions="Center">
+                <Label Text="What do you need to do?"
+                       HorizontalTextAlignment="Center"
+                       FontSize="18"></Label>
+            </Frame>
+            <Frame BackgroundColor="#ededed"
+                   CornerRadius="10"
+                   BorderColor="Transparent"
+                   x:Name="frameCaptureTimeSheets">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="frameCaptureTimeSheets_Tapped" />
+                </Frame.GestureRecognizers>
+                <Label HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="20">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static helpers:FontAwesomeRegularIcons.Timer}"
+                                  FontFamily="FontAwesomeRegularIcons"
+                                  FontSize="30" />
+                            <Span Text="&#10;" />
+                            <Span Text="Capture some timesheets" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame BackgroundColor="#ededed"
+                   CornerRadius="10"
+                   BorderColor="Transparent">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="frameNotImplemented_Tapped" />
+                </Frame.GestureRecognizers>
+                <Label HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="20">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static helpers:FontAwesomeRegularIcons.FileInvoiceDollar}"
+                                  FontFamily="FontAwesomeRegularIcons"
+                                  FontSize="30" />
+                            <Span Text="&#10;" />
+                            <Span Text="Upload some slips" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Label Text="Or..."
+                   VerticalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="20"
+                   FontFamily="AvenirBold"
+                   FontAttributes="Bold"></Label>
+            <Frame BackgroundColor="#e5c100"
+                   CornerRadius="10"
+                   BorderColor="Transparent">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="frameNotImplemented_Tapped" />
+                </Frame.GestureRecognizers>
+                <Label HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="18">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static helpers:FontAwesomeSolidIcons.Comments}"
+                                  FontFamily="FontAwesomeSolidIcons"
+                                  FontSize="30"
+                                  TextColor="White" />
+                            <Span Text="&#10;" />
+                            <Span Text="Start a chatting about something else"
+                                  TextColor="White"
+                                  FontFamily="AvenirBold"
+                                  FontAttributes="Bold" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

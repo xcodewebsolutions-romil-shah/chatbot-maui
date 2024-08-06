@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Chatbot.App.Pages.ChatPage"
+             xmlns:helpers="clr-namespace:Chatbot.App.Helpers"
+             Title="Chatbot"
+             Shell.NavBarIsVisible="True">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="Center">
+            <Label Text="Chatbot"
+                   FontFamily="AvenirBold"
+                   TextColor="White"
+                   VerticalOptions="Center"
+                   FontSize="18" />
+        </StackLayout>
+    </Shell.TitleView>
+    <StackLayout Orientation="Vertical">
+        <ScrollView VerticalOptions="FillAndExpand"
+                    x:Name="chatMessagesScrollView">
+            <StackLayout x:Name="chatMessages" />
+        </ScrollView>
+        <Grid RowDefinitions="*"
+              ColumnDefinitions="35,35,*"
+              RowSpacing="0"
+              ColumnSpacing="5"
+              HorizontalOptions="FillAndExpand"
+              Margin="5"
+              Padding="5,0,5,0"
+              VerticalOptions="End">
+            <ImageButton HorizontalOptions="Center"
+                         VerticalOptions="End"
+                         Margin="10"
+                         HeightRequest="25"
+                         WidthRequest="25"
+                         Grid.Column="0">
+                <ImageButton.Source>
+                    <FontImageSource Glyph="{x:Static helpers:FontAwesomeLightIcons.Camera}"
+                                     FontFamily="FontAwesomeLightIcons"
+                                     Color="Black" />
+                </ImageButton.Source>
+            </ImageButton>
+            <ImageButton HorizontalOptions="Center"
+                         VerticalOptions="End"
+                         Margin="10"
+                         HeightRequest="25"
+                         WidthRequest="25"
+                         Grid.Column="1">
+                <ImageButton.Source>
+                    <FontImageSource Glyph="{x:Static helpers:FontAwesomeLightIcons.Microphone}"
+                                     FontFamily="FontAwesomeLightIcons"
+                                     Color="Black" />
+                </ImageButton.Source>
+            </ImageButton>
+            <Frame BackgroundColor="#f8f4f4"
+                   CornerRadius="5"
+                   Padding="10,0,10,0"
+                   BorderColor="Transparent"
+                   Grid.Column="2">
+                <Grid RowDefinitions="*"
+                      ColumnDefinitions="*,25">
+                    <Editor Placeholder="Enter client, matter &amp; time details"
+                            Keyboard="Chat"
+                            x:Name="edInputMessage"
+                            MaxLength="200"
+                            AutoSize="TextChanges"
+                            HorizontalOptions="StartAndExpand"
+                            Grid.Column="0" />
+                    <ImageButton HorizontalOptions="EndAndExpand"
+                                 VerticalOptions="End"
+                                 Margin="10,10,5,10"
+                                 HeightRequest="25"
+                                 WidthRequest="25"
+                                 x:Name="ibtnSendMessage"
+                                 Clicked="SendMessage_Clicked"
+                                 Grid.Column="1">
+                        <ImageButton.Source>
+                            <FontImageSource Glyph="{x:Static helpers:FontAwesomeLightIcons.CircleArrowRight}"
+                                             FontFamily="FontAwesomeLightIcons"
+                                             Color="Black" />
+                        </ImageButton.Source>
+                    </ImageButton>
+                </Grid>
+            </Frame>
+        </Grid>
+    </StackLayout>
+</ContentPage>

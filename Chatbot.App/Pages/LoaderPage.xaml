@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Chatbot.App.Pages.LoaderPage"
+             xmlns:local="clr-namespace:Chatbot.App.Helpers">
+    <VerticalStackLayout HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         Spacing="10">
+        <local:GIFImage x:Name="imgLoader"
+                        Source="chatbot_loader.gif"
+                        ImageName="chatbot_loader.gif"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        IsAnimationPlaying="False"
+                        IsPlaying="False" />
+        <Label Text="Please wait"
+               HorizontalOptions="Center"
+               FontSize="20"></Label>
+    </VerticalStackLayout>
+</ContentPage>

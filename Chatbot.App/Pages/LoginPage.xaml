@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Chatbot.App.Pages.LoginPage"
+             Title="LoginPage">
+    <VerticalStackLayout VerticalOptions="Center"
+                         HorizontalOptions="Center">
+        <VerticalStackLayout VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Spacing="20"
+                             IsVisible="true"
+                             x:Name="vslSignInToContinue">
+            <Image Source="chatbot_logo.svg"></Image>
+            <Label VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="18">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Please sign in to continue." />
+                        <Span Text="&#10;" />
+                        <Span Text="Let’s get started!" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Button x:Name="btnSignInNavigation"
+                    Text="Click here to sign in"
+                    FontSize="18"
+                    Clicked="btnSignInNavigation_Clicked"></Button>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

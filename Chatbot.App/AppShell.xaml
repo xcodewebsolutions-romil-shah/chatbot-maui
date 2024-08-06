@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell x:Class="Chatbot.App.AppShell"
+       xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:Chatbot.App.Pages"
+       xmlns:helpers="clr-namespace:Chatbot.App.Helpers"
+       Title="Chatbot"
+       Shell.FlyoutBehavior="Disabled"
+       Shell.TitleColor="White"
+       Shell.BackgroundColor="#504c4c"
+       Shell.TabBarBackgroundColor="#e5c100"
+       Shell.TabBarForegroundColor="White"
+       Shell.TabBarUnselectedColor="White"
+       Shell.TabBarTitleColor="White">
+    <TabBar>
+        <Tab Title="Home">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FontAwesomeLightIcons"
+                                 Glyph="{x:Static helpers:FontAwesomeLightIcons.House}" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab Title="Calendar">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FontAwesomeLightIcons"
+                                 Glyph="{x:Static helpers:FontAwesomeLightIcons.Calendar}" />
+            </Tab.Icon>
+            <ShellContent>
+                <ContentPage>
+                    <Shell.TitleView>
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="Center">
+                            <Label Text="Calendar"
+                                   FontFamily="AvenirBold"
+                                   TextColor="White"
+                                   VerticalOptions="Center"
+                                   FontSize="18" />
+                        </StackLayout>
+                    </Shell.TitleView>
+                    <ContentPage.Content>
+                        <StackLayout HorizontalOptions="Center"
+                                     VerticalOptions="Center">
+                            <Label Text="Feature coming soon! Thanks for your understanding!"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"></Label>
+                        </StackLayout>
+                    </ContentPage.Content>
+                </ContentPage>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Chat">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FontAwesomeRegularIcons"
+                                 Glyph="{x:Static helpers:FontAwesomeRegularIcons.Sparkles}" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:ChatPage}" />
+        </Tab>
+        <Tab Title="Files">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FontAwesomeLightIcons"
+                                 Glyph="{x:Static helpers:FontAwesomeLightIcons.File}" />
+            </Tab.Icon>
+            <ShellContent>
+                <ContentPage>
+                    <Shell.TitleView>
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="Center">
+                            <Label Text="Files"
+                                   FontFamily="AvenirBold"
+                                   TextColor="White"
+                                   VerticalOptions="Center"
+                                   FontSize="18" />
+                        </StackLayout>
+                    </Shell.TitleView>
+                    <ContentPage.Content>
+                        <StackLayout HorizontalOptions="Center"
+                                     VerticalOptions="Center">
+                            <Label Text="Feature coming soon! Thanks for your understanding!"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"></Label>
+                        </StackLayout>
+                    </ContentPage.Content>
+                </ContentPage>
+            </ShellContent>
+        </Tab>
+        <Tab Title="More">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FontAwesomeLightIcons"
+                                 Glyph="{x:Static helpers:FontAwesomeLightIcons.SquareEllipsisVertical}" />
+            </Tab.Icon>
+            <ShellContent Route="MoreOptionsTemp">
+                <ContentPage>
+                    <ContentPage.Content>
+                        <StackLayout />
+                    </ContentPage.Content>
+                </ContentPage>
+            </ShellContent>
+        </Tab>
+    </TabBar>
+</Shell>
